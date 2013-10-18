@@ -29,7 +29,7 @@ This app uses the Devise gem for users, running on Rails v.3.2.14.
 
 Screenshots of your application below:
 
-![Screenshot 1](app/assets/images/ss.png)
+
 
 
 
