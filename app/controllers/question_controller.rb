@@ -78,7 +78,7 @@ class QuestionController < ApplicationController
     flash[:notice] = "Question has been deleted"
 
     respond_to do |format|
-      format.html { redirect_to questions_url }
+      format.html { redirect_to question_url }
       format.json { head :no_content }
     end
   end

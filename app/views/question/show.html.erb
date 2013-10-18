@@ -1,10 +1,10 @@
 
 <div id="question">
-  <h2><%= @question.inquiry %></h2>
+  <h2><%= @question.question %></h2>
   <p id="notice"><%= notice %></p>
   <!-- <p>
     <b>Description:</b>
-    <%= @question.inquiry %>
+    <%= @question.question %>
   </p> -->
 
   <p>
@@ -15,12 +15,10 @@
 
 <h3>Updates</h3>
 <ul id='users'>
-  <% @question.author.each do |author| %>
-    <li>
-      <%= 'Updated by ' + author.user.email + ' at ' + author.created_at.to_s  %>
-    </li>
+  <% @question.authors.each do |author| %>
+
   <% end %>
 </ul>
 
 <%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', question_path %>
+<%= link_to 'Back', question_index_path %>

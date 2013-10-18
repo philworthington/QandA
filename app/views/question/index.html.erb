@@ -5,17 +5,16 @@
   <thead>
     <tr>
       <th>Question</th>
+      <th>Answer</th>
     </tr>
   </thead>
   <tbody>
   <% @questions.each do |question| %>
     <tr>
       <td><%= question.question %></td>
-      <td>
-        <%= link_to "Show", show_question_path(question) %>
-        <%= link_to "Edit", edit_question_path(question) %>
-        <%= link_to "Delete", question, method: :destroy %>
-
+      <td><%= link_to "Show", question_path(question) %> </td>
+      <td><%= link_to "Edit", edit_question_path(question) %></td>
+      <td><%= link_to "Delete", question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
   </tbody>
