@@ -1,0 +1,21 @@
+<h1>User Profiles</h1>
+
+<table>
+  <tr>
+    <th>User Emails</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.email %></td>
+    <td><%= link_to 'Show', user %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Back to questions', '/' %>
