@@ -1,0 +1,26 @@
+
+<div id="question">
+  <h2><%= @question.inquiry %></h2>
+  <p id="notice"><%= notice %></p>
+  <!-- <p>
+    <b>Description:</b>
+    <%= @question.inquiry %>
+  </p> -->
+
+  <p>
+    <b>Answer:</b>
+    <%= @question.answer %>
+  </p>
+</div>
+
+<h3>Updates</h3>
+<ul id='users'>
+  <% @question.author.each do |author| %>
+    <li>
+      <%= 'Updated by ' + author.user.email + ' at ' + author.created_at.to_s  %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', question_path %>
